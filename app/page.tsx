@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import ProgressBar from "./progress";
+import UploadFile from "./UploadFile";
 
 const HomePage = () => {
   return (
@@ -33,13 +34,7 @@ const HomePage = () => {
           </div>
           <div className="flex max-md:flex-col gap-6 max-md:gap-4 items-baseline max-md:items-center max-md:w-max mt-2">
             <div className="flex flex-col gap-3 max-md:gap-1">
-              <div className="px-6 py-4 text-white bg-[#6E00BE] border-0 rounded-lg max-md:py-3 max-md:px-4 text-base max-md:text-sm font-bold max-md:font-semibold text-center cursor-pointer relative">
-                <span className="absolute bg-green-600 flex justify-center px-4 py-0.5 left-8 -top-2 text-[10px] items-center font-normal text-white rounded-b-lg h-5">
-                  Save 60% of time!
-                </span>
-                <span className="absolute -top-2 size-2 left-6 rotate-180 border-r-8 border-r-[white] border-t-8 border-t-green-700 border-solid" />
-                Upload Resume
-              </div>
+              <UploadFile />
               <span className="text-[#59566C] text-xs font-normal">
                 *Doc, Docx, RTF, PDF (Max file size - 6MB)
               </span>
