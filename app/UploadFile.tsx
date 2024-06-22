@@ -1,5 +1,11 @@
 "use client";
-import React, { ChangeEvent, useCallback, useState } from "react";
+import React, {
+  ChangeEvent,
+  FC,
+  ReactNode,
+  useCallback,
+  useState,
+} from "react";
 
 const allowedTypes = [
   "application/pdf",
@@ -9,7 +15,17 @@ const allowedTypes = [
 ];
 const maxSize = 6 * 1024 * 1024;
 
-const UploadFile = () => {
+type UploadFileProps = {
+  buttonType: "basicBtn" | "btnwithMessage";
+  iconPosition?: "left" | "right";
+  icon?: ReactNode;
+};
+
+const UploadFile: FC<UploadFileProps> = ({
+  buttonType,
+  iconPosition,
+  icon,
+}) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
 
@@ -71,11 +87,17 @@ const UploadFile = () => {
         role="button"
         aria-label={`${selectedFile}`}
       >
-        <span className="absolute bg-green-600 flex justify-center px-4 py-0.5 left-8 -top-2 text-[10px] items-center font-normal text-white rounded-b-lg h-5">
-          Save 60% of time!
-        </span>
-        <span className="absolute -top-2 size-2 left-6 rotate-180 border-r-8 border-r-[white] border-t-8 border-t-green-700 border-solid" />
-        Upload Resume
+        {buttonType !== "basicBtn" && (
+          <>
+            <span className="absolute bg-green-600 flex justify-center px-4 py-0.5 left-8 -top-2 text-[10px] items-center font-normal text-white rounded-b-lg h-5">
+              Save 60% of time!
+            </span>
+            <span className="absolute -top-2 size-2 left-6 rotate-180 border-r-8 border-r-[white] border-t-8 border-t-green-700 border-solid" />
+          </>
+        )}
+        {iconPosition === "right" && <></>}
+        <span>Upload Resume</span>
+        {iconPosition === "left" && <></>}
       </label>
     </>
   );

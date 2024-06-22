@@ -34,13 +34,13 @@ const HomePage = () => {
           </div>
           <div className="flex max-md:flex-col gap-6 max-md:gap-4 items-baseline max-md:items-center max-md:w-max mt-2">
             <div className="flex flex-col gap-3 max-md:gap-1">
-              <UploadFile />
+              <UploadFile  buttonType="basicBtn"/>
               <span className="text-[#59566C] text-xs font-normal">
                 *Doc, Docx, RTF, PDF (Max file size - 6MB)
               </span>
             </div>
             <div className="px-6 py-4 text-[#6E00BE] bg-white border border-[#6E00BE] rounded-lg max-md:py-3 max-md:px-4 text-base max-md:text-sm font-bold max-md:font-semibold text-center cursor-pointer max-md:w-full">
-              Upload Resume
+              Add Manually
             </div>
           </div>
         </div>
