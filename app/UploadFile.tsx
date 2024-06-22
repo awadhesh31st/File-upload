@@ -1,8 +1,8 @@
 "use client";
+import Image from "next/image";
 import React, {
   ChangeEvent,
   FC,
-  ReactNode,
   useCallback,
   useState,
 } from "react";
@@ -18,13 +18,11 @@ const maxSize = 6 * 1024 * 1024;
 type UploadFileProps = {
   buttonType: "basicBtn" | "btnwithMessage";
   iconPosition?: "left" | "right";
-  icon?: ReactNode;
 };
 
 const UploadFile: FC<UploadFileProps> = ({
   buttonType,
-  iconPosition,
-  icon,
+  iconPosition
 }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -70,6 +68,10 @@ const UploadFile: FC<UploadFileProps> = ({
     }
   }, []);
 
+  const renderIcon = <span className="relative size-4">
+    <Image src="" alt="icon" fill/>
+  </span>
+
   return (
     <>
       <input
@@ -95,9 +97,9 @@ const UploadFile: FC<UploadFileProps> = ({
             <span className="absolute -top-2 size-2 left-6 rotate-180 border-r-8 border-r-[white] border-t-8 border-t-green-700 border-solid" />
           </>
         )}
-        {iconPosition === "right" && <></>}
+        {iconPosition === "right" && renderIcon}
         <span>Upload Resume</span>
-        {iconPosition === "left" && <></>}
+        {iconPosition === "left" && renderIcon}
       </label>
     </>
   );
