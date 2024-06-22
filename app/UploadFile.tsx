@@ -1,11 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, {
-  ChangeEvent,
-  FC,
-  useCallback,
-  useState,
-} from "react";
+import React, { ChangeEvent, FC, useCallback, useState } from "react";
 
 const allowedTypes = [
   "application/pdf",
@@ -16,13 +11,17 @@ const allowedTypes = [
 const maxSize = 6 * 1024 * 1024;
 
 type UploadFileProps = {
+  btnLabel: string;
+  btnMessage?: string;
   buttonType: "basicBtn" | "btnwithMessage";
   iconPosition?: "left" | "right";
 };
 
 const UploadFile: FC<UploadFileProps> = ({
+  btnLabel,
+  btnMessage,
   buttonType,
-  iconPosition
+  iconPosition,
 }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
@@ -68,9 +67,11 @@ const UploadFile: FC<UploadFileProps> = ({
     }
   }, []);
 
-  const renderIcon = <span className="relative size-4">
-    <Image src="" alt="icon" fill/>
-  </span>
+  const renderIcon = (
+    <span className="relative size-4">
+      <Image src="" alt="icon" fill />
+    </span>
+  );
 
   return (
     <>
@@ -92,13 +93,13 @@ const UploadFile: FC<UploadFileProps> = ({
         {buttonType !== "basicBtn" && (
           <>
             <span className="absolute bg-green-600 flex justify-center px-4 py-0.5 left-8 -top-2 text-[10px] items-center font-normal text-white rounded-b-lg h-5">
-              Save 60% of time!
+              {btnMessage}
             </span>
             <span className="absolute -top-2 size-2 left-6 rotate-180 border-r-8 border-r-[white] border-t-8 border-t-green-700 border-solid" />
           </>
         )}
         {iconPosition === "right" && renderIcon}
-        <span>Upload Resume</span>
+        <span>{btnLabel}</span>
         {iconPosition === "left" && renderIcon}
       </label>
     </>

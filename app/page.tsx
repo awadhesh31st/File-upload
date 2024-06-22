@@ -34,7 +34,7 @@ const HomePage = () => {
           </div>
           <div className="flex max-md:flex-col gap-6 max-md:gap-4 items-baseline max-md:items-center max-md:w-max mt-2">
             <div className="flex flex-col gap-3 max-md:gap-1">
-              <UploadFile  buttonType="basicBtn"/>
+              <UploadFile btnLabel="Upload Resume" btnMessage="Save 60% of time!" buttonType="basicBtn"/>
               <span className="text-[#59566C] text-xs font-normal">
                 *Doc, Docx, RTF, PDF (Max file size - 6MB)
               </span>
