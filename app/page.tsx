@@ -49,7 +49,7 @@ const HomePage = () => {
       <div className="flex flex-col gap-4 max-md:gap-3 max-md:items-center">
         <div className="flex justify-start max-md:justify-center items-start max-md:items-center flex-col max-md:text-center">
           <div className="flex gap-2 max-md:gap-1 items-center justify-center">
-            <h4
+  ~          <h4
               className="text-2xl font-bold max-md:text-sm text-[#17142A]"
               dangerouslySetInnerHTML={{ __html: content }}
             />
