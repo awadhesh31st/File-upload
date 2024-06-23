@@ -6,3 +6,10 @@
   background: linear-gradient(#ffffff94, #fafafb) padding-box, linear-gradient(to top, #fafafb, #df392330) border-box;
     border: 1px solid #fafafb00;
 }
+
+.textShade{
+  background: linear-gradient(90deg, #E119A0 28.42%, #0D99FF 71.62%);
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
