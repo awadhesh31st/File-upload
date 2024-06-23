@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 .borderProfileGradient {
-  border-radius: var(--Radius-2, 8px);
-  border: 1px solid rgba(224, 57, 35, 0.1);
-  border-bottom-width: 0px;
-  background: linear-gradient(
-    180deg,
-    rgba(224, 57, 35, 0.1) 0%,
-    rgba(224, 57, 35, 0) 100%
-  );
+  background: linear-gradient(#ffffff94, #fafafb) padding-box, linear-gradient(to top, #fafafb, #df392330) border-box;
+    border: 1px solid #fafafb00;
 }

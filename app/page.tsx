@@ -7,12 +7,12 @@ const HomePage = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="flex bg-[#FAFAFB] p-6 rounded-xl max-md:p-4 max-md:m-4 max-md:flex-col gap-9 max-md:gap-4 max-md:items-center max-w-3xl max-md:w-full">
-        <div className="flex py-2 px-4 gap-0.5 border rounded-lg border-solid borderProfileGradient h-full flex-col justify-center items-center w-[120px]">
-          <ProgressBar percent={5} />
+        <div className="flex py-2 px-4 gap-0.5 border rounded-t-lg border-b-0  borderProfileGradient h-full flex-col justify-center items-center w-[120px] text-center">
+          <ProgressBar percent={30} />
           <span className="text-[10px] font-normal text-[#E03923] mt-2">
             Critical!
           </span>
-          <span className="text-[#17142A] text-[10px] font-semibold">
+          <span className="text-[#17142A] text-[10px] font-semibold w-[88px]">
             Profile Score
           </span>
         </div>
@@ -34,7 +34,7 @@ const HomePage = () => {
           </div>
           <div className="flex max-md:flex-col gap-6 max-md:gap-4 items-baseline max-md:items-center max-md:w-max mt-2">
             <div className="flex flex-col gap-3 max-md:gap-1">
-              <UploadFile btnLabel="Upload Resume" btnMessage="Save 60% of time!" buttonType="basicBtn"/>
+              <UploadFile btnLabel="Upload Resume" btnMessage="Save 60% of time!" buttonType="btnwithMessage" />
               <span className="text-[#59566C] text-xs font-normal">
                 *Doc, Docx, RTF, PDF (Max file size - 6MB)
               </span>

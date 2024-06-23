@@ -69,7 +69,7 @@ const UploadFile: FC<UploadFileProps> = ({
 
   const renderIcon = (
     <span className="relative size-4">
-      <Image src="" alt="icon" fill />
+      <Image src="/ai-magic.svg" alt="icon" fill />
     </span>
   );
 
@@ -85,7 +85,7 @@ const UploadFile: FC<UploadFileProps> = ({
       />
       <label
         htmlFor="file-upload"
-        className="px-6 py-4 text-white bg-[#6E00BE] border-0 rounded-lg max-md:py-3 max-md:px-4 text-base max-md:text-sm font-bold max-md:font-semibold text-center cursor-pointer relative"
+        className="px-6 py-4 text-white flex gap-1 items-center justify-center bg-[#6E00BE] border-0 rounded-lg max-md:py-3 max-md:px-4 text-base max-md:text-sm font-bold max-md:font-semibold text-center cursor-pointer relative"
         aria-labelledby="upload-label"
         role="button"
         aria-label={`${selectedFile}`}
